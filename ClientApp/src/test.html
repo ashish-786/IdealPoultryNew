@@ -1,0 +1,165 @@
+<div class="leadDetails__row">
+  <h2 class="leadDetails__title">Personal Details</h2>
+  <div class="leadDetails__form">
+    <div class="leadDetails__form--row">
+      <div class="col-4">
+        <div class="group">
+          <span class="splfield">Date Time</span>
+          <input type="text" formControlName="datetime">
+          <span class="highlight"></span><span class="bar"></span>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="group">
+          <span class="splfield">Product</span>
+          <input type="text" formControlName="product">
+          <span class="highlight"></span><span class="bar"></span>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="group">
+          <select type="text" (change)="currentLenderValidations()" formControlName="loantype" [ngClass]="{ 'is-invalid': submitted && f.loantype.errors }">
+            <option *ngFor="let loan of loanStatusList" [value]="loan.loanType">{{loan.loanType}}</option>
+          </select>
+          <div *ngIf="submitted && f.loantype.errors" class="invalid-field">
+            <div *ngIf="f.loantype.errors.required">Loan Type is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="group">
+          <span class="splfield">Lead Stage</span>
+          <input type="text" formControlName="leadstage" [ngClass]="{ 'is-invalid': submitted && f.leadstage.errors }">
+          <span class="highlight"></span><span class="bar"></span>
+          <div *ngIf="submitted && f.leadstage.errors" class="invalid-field">
+            <div *ngIf="f.leadstage.errors.required">Lead Stage is required</div>
+          </div>
+        </div>
+      </div>
+     
+
+     
+    </div>
+    <div class="leadDetails__form--row">
+      <div class="col-4">
+        <div class="group">
+          <span class="splfield">Customer Name</span>
+          <input type="text" formControlName="customerName" [ngClass]="{ 'is-invalid': submitted && f.customerName.errors }">
+          <span class="highlight"></span><span class="bar"></span>
+          <div *ngIf="submitted && f.customerName.errors" class="invalid-field">
+            <div *ngIf="f.customerName.errors.required">Customer Name is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="group">
+          <span class="splfield">Gender</span>
+          <input type="text" formControlName="gender" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }">
+          <span class="highlight"></span><span class="bar"></span>
+          <div *ngIf="submitted && f.gender.errors" class="invalid-field">
+            <div *ngIf="f.gender.errors.required">Gender is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="group">
+          <span class="splfield">Phone number</span>
+          <input type="text" numbersOnly formControlName="phonenumber" [ngClass]="{ 'is-invalid': submitted && f.phonenumber.errors }">
+          <span class="highlight"></span><span class="bar"></span>
+          <div *ngIf="submitted && f.phonenumber.errors" class="invalid-field">
+            <div *ngIf="f.phonenumber.errors.required">Phone Number is required</div>
+            <div *ngIf="f.phonenumber.errors.maxlength || f.phonenumber.errors.minlength">
+              Phone Number should be of
+              10 digits
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="group">
+          <span class="splfield">Additional Phone Number</span>
+          <input type="text" numbersOnly formControlName="additionalphonenumber"><span class="highlight"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    
+     
+    
+    </div>
+    <div class="leadDetails__form--row">
+      <div class="col-4">
+        <div class="group">
+          <span class="splfield">Company</span>
+          <input type="text" [ngClass]="{ 'is-invalid': submitted && f.company.errors }" formControlName="company">
+          <span class="highlight"></span><span class="bar"></span><span class="searchIcon">
+            <i class="fal fa-search"></i>
+          </span>
+          <div *ngIf="submitted && f.company.errors" class="invalid-field">
+            <div *ngIf="f.company.errors.required">Company is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="group">
+          <span class="splfield">Net Take Home (Monthly)</span>
+          <input type="text" appINRcurrency formControlName="nettakehome" [ngClass]="{ 'is-invalid': submitted && f.nettakehome.errors }">
+          <span class="highlight"></span><span class="bar">
+          </span>
+          <div *ngIf="submitted && f.nettakehome.errors" class="invalid-field">
+            <div *ngIf="f.nettakehome.errors.required">Take Home Salary is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="group">
+          <span class="splfield">Primary Bank</span>
+          <input type="text" formControlName="primaryBank" [ngClass]="{ 'is-invalid': submitted && f.primaryBank.errors }">
+          <span class="highlight"></span><span class="bar"></span>
+          <div *ngIf="submitted && f.primaryBank.errors" class="invalid-field">
+            <div *ngIf="f.primaryBank.errors.required">Primary Bank is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="group">
+          <span class="splfield">Preferred Lender</span>
+          <input type="text" formControlName="prefferedlender">
+          <span class="highlight"></span><span class="bar"></span>
+        </div>
+      </div>
+    
+    
+    </div>
+    <div class="leadDetails__form--row">
+      <div class="col-3">
+        <div class="group">
+          <span class="splfield">PAN</span>
+          <input type="text" formControlName="pan">
+          <span class="highlight"></span><span class="bar"></span>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="group">
+          <span class="splfield">Loan Amount</span>
+          <input type="text" appINRcurrency formControlName="loanamount" [ngClass]="{ 'is-invalid': submitted && f.loanamount.errors }">
+          <span class="highlight"></span><span class="bar"></span>
+          <div *ngIf="submitted && f.loanamount.errors" class="invalid-field">
+            <div *ngIf="f.loanamount.errors.required">Loan Amount is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="group">
+          <span class="splfield">Agent Assigned</span>
+          <input type="text" formControlName="assignedagent" [ngClass]="{ 'is-invalid': submitted && f.assignedagent.errors }">
+          <span class="highlight"></span><span class="bar"></span>
+          <div *ngIf="submitted && f.assignedagent.errors" class="invalid-field">
+            <div *ngIf="f.assignedagent.errors.required">Agent Name is required</div>
+          </div>
+        </div>
+      </div>
+    
+
+    </div>
+  </div>
+</div>

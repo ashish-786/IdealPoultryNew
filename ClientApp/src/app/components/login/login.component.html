@@ -1,0 +1,76 @@
+<div class="loginBody">
+  <div class="login">
+    <div class="login__SideBar">
+      <div class="login__Content">
+        <h1 class="login__Content--welcome">WELCOME</h1>
+        <p class="login__Content--tosahihai">to <strong>Ideal Poultry</strong></p>
+        <p class="login__Content--text">Login to access your account</p>
+      </div>
+    </div>
+    <div class="login__Form">
+      <div class="login__Form--Content">
+        <div class="logo"></div>
+        <div class="formSection">
+          <div class="formGroup">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div class="formGroup__row">
+                <div class="formGroup__row--col-12 inp">
+                  <i class="fal fa-user"></i><input class="customForm" type="text" formControlName="username" placeholder="Username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" /><span class="label">Username</span>
+                </div>
+                <div *ngIf="submitted && f.username.errors" class="invalid-field">
+                  <div *ngIf="f.username.errors.required">Username is required</div>
+                </div>
+              </div>
+              <div class="formGroup__row">
+                <div class="formGroup__row--col-12 inp">
+                  <i class="fal fa-lock-alt"></i>
+                  <input class="customForm" type="password" formControlName="password" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" /><span class="label">Password</span><a class="passwordEye--open" href="#">
+                    <i class="fal fa-eye"></i>
+                  </a><a class="passwordEye--close" href="#">
+                    <i class="fal fa-eye-slash"></i>
+                  </a>
+                  <div *ngIf="submitted && f.password.errors" class="invalid-field">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                  </div>
+                </div>
+              </div>
+              <div class="invalid-field-error" *ngIf="loginStatus">
+                <div>Incorrect Password or Username</div>
+              </div>
+              <div class="invalid-field-error" *ngIf="multipleLogin">
+                <div>You loggedIn from another location!</div>
+              </div>
+              <div class="formGroup__row">
+                <div class="formGroup__row--col-12">
+                  <button [disabled]="loading" class="loginbtn">Get Started</button>
+                  <img *ngIf="loading" class="pl-3" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                </div>
+              </div>
+              <div _ngcontent-c4="" class="formGroup__row">
+                <div _ngcontent-c4="" class="divider">
+                  <span></span>
+                </div>
+              </div>
+              <div class="formGroup__row col-2">
+                <div class="formGroup__row--col-6">
+                  <div class="md-checkbox">
+                    <input id="i2" type="checkbox" checked=""><label for="i2">Remember me</label>
+                  </div>
+                </div>
+                <!--<div class="formGroup__row--col-6"><a class="fogotPass" routerLink="/resetpassword">Forgot Password ?</a></div>-->
+                <div class="formGroup__row--col-6"><a class="fogotPass" href="javascript:void(0);">Forgot Password ?</a></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+<div class="app" [ngClass]="{'is-collapsed': expandMenu==false}">
+  <div *ngIf="currentUser != null">
+    <app-leftmenu (menuStatus)="menuOperations($event)"></app-leftmenu>
+  </div>
+  <div class="pageContainer" [ngClass]="{ 'loginMainSection': currentUser==null }">
+    <div *ngIf="currentUser != null" class="header">
+      <div class="headerNav">
+        <div class="headerNav__left">
+          <a class="sidebar-toggle" id="sidebar-toggle" (click)="toggleMenu()" href="javascript:void(0);"><i class="fal fa-bars"></i></a>
+        </div>
+        <div class="headerNav__right">                 
+          <div class="myProfile">
+            <!--<a href="javascript:void(0);">My Profile</a>-->
+          </div>
+          <div class="signOut">
+            <a href="javascript:void(0);" (click)="logout()">Sign Out<i class="fal fa-sign-out"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mainContainer">
+      <div class="row">
+        <div class="col-lg-12">
+          <alert></alert>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--<ng-progress (started)="onProgressStarted()" (completed)="onProgressCompleted()" [showSpinner]="true" [thick]="true"></ng-progress>
+<div class="block-screen" *ngIf="isProgress===true"><b>Please wait...</b></div>-->
+<ngx-ui-loader></ngx-ui-loader>
+<!-- credits -->
+<div class="text-center">
+  <p>Polutory - 2019</p>
+</div>
+

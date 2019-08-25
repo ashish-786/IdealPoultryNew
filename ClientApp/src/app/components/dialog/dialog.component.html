@@ -1,0 +1,6 @@
+<p-confirmDialog #cd key="ConfirmAction" header="Confirmation" icon="fa fa-question-circle" class="custom-confirmation-modal" width="400" >
+  <p-footer>
+    <button type="button" pButton icon="pi pi-times" label="{{confirmLabel}}" (click)="cd.reject()"></button>
+    <button type="button" pButton icon="pi pi-check" label="{{denyLabel}}" (click)="cd.accept()"></button>
+  </p-footer>
+</p-confirmDialog>

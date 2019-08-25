@@ -1,0 +1,636 @@
+<div class="sideBar">
+  <div class="sideBarInner">
+    <div class="sideBarlogo">
+      <span class="mobileToggle" (click)="toggleMenu()"></span>
+      <span class="sideBarlogo__half"><img src="assets/img/logo-icon.png"></span>
+      <span class="sideBarlogo__full"><img src="assets/img/logo.png"></span>
+    </div>
+    <div class="sideBarUserInfo">
+      <a href="javascript:void(0);">
+        <span class="sideBarUserInfo__pic">U</span>
+      </a>
+      <span class="sideBarUserInfo__name">{{currentUser.userName}}</span>
+      <span class="sideBarUserInfo__type">{{currentUser.roleName}}</span>
+    </div>
+    <div class="sideBarMenu">
+      <ul>
+        <li>
+          <a routerLink="/home"><i class="fal fa-tachometer-alt"></i><span class="title">Dashboard</span></a>
+        </li>
+        <li [ngClass]="showFiles?'is-active':''">
+          <a (click)="toggleFile()" href="javascript:void(0);"><i class="fal fa-user"></i><span class="title">File</span><span class="arrow"><i class="fal fa-angle-right"></i></span></a>
+          <ul>
+            <li>
+              <a routerLink="/customersearch"><span class="title">Customer</span></a>
+            </li>
+            <li [ngClass]="showProducts?'is-active':''">
+              <a (click)="toggleProducts()" href="javgascript:void(0);"><i class="fal fa-user"></i><span class="title">Products</span><span class="arrow"><i class="fal fa-angle-right"></i></span></a>
+              <ul>
+                <li>
+                  <a routerLink="/productsearch"><span class="title">Product Maintanance</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Reorder Product List</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Classes</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Categories</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Breeds</span></a>
+                </li>
+              </ul>
+            </li>
+            <li [ngClass]="showBreeds?'is-active':''">
+              <a (click)="toggleBreeds()" href="javgascript:void(0);"><i class="fal fa-user"></i><span class="title">Breeds</span><span class="arrow"><i class="fal fa-angle-right"></i></span></a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Breed Maintanance</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Reorder Breed List</span></a>
+                </li>
+              </ul>
+            </li>
+            <li [ngClass]="showOrders?'is-active':''">
+              <a (click)="toggleOrders()" href="javgascript:void(0);"><i class="fal fa-user"></i><span class="title">Orders</span><span class="arrow"><i class="fal fa-angle-right"></i></span></a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Order Maintanance</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Reorder Order List</span></a>
+                </li>
+              </ul>
+            </li>
+            <!--<li>
+              <a href="javgascript:void(0);"><span class="title">Orders</span></a>
+            </li>-->
+            <li>
+              <a href="javgascript:void(0);"><span class="title">Dates</span></a>
+            </li>
+            <li>
+              <a href="javgascript:void(0);"><span class="title">Rolodex Search</span></a>
+            </li>
+
+            <li [ngClass]="showEDIDocuments?'is-active':''">
+              <a (click)="toggleEDIDocuments()" href="javgascript:void(0);">
+                <i class="fal fa-user"></i>
+                <span class="title">EDI Documents</span><span class="arrow">
+                  <i class="fal fa-angle-right">
+                  </i>
+                </span>
+              </a>
+              <ul>
+                <li [ngClass]="showHatcheryNetwork?'is-active':''">
+                  <a (click)="toggleHatcheryNetwork()" href="javgascript:void(0);">
+                    <i class="fal fa-user"></i>
+                    <span class="title">Hatchery Network</span><span class="arrow">
+                      <i class="fal fa-angle-right">
+                      </i>
+                    </span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="javascript:void(0);"><span class="title">Import Oders</span></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);"><span class="title">Privett Hatchery Export</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <br />
+                <li [ngClass]="showTractorSupply?'is-active':''">
+                  <a (click)="toggleTractorSupply()" href="javgascript:void(0);">
+                    <i class="fal fa-user"></i>
+                    <span class="title">Tractor Supply</span><span class="arrow">
+                      <i class="fal fa-angle-right">
+                      </i>
+                    </span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="javascript:void(0);"><span class="title">Import Pos</span></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);"><span class="title">Export Invoices</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <br />
+                <li [ngClass]="showMurrayMcMurrayEDI?'is-active':''">
+                  <a (click)="toggleMurrayMcMurrayEDI()" href="javgascript:void(0);">
+                    <i class="fal fa-user"></i>
+                    <span class="title">Murray McMurray EDI</span><span class="arrow">
+                      <i class="fal fa-angle-right">
+                      </i>
+                    </span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="javascript:void(0);"><span class="title">Import Pos</span></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);"><span class="title">Export Shipping Documents</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <br />
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Moyer Export</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Web Orders</span></a>
+                </li>
+              </ul>
+            </li>
+
+            <li [ngClass]="showExport?'is-active':''">
+              <a (click)="toggleExport()" href="javgascript:void(0);">
+                <i class="fal fa-user"></i>
+                <span class="title">Export</span><span class="arrow">
+                  <i class="fal fa-angle-right">
+                  </i>
+                </span>
+              </a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Customers by Type</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Customers by Pricesheet</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Customer History</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0);"><span class="title">Import</span></a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"><span class="title">Send Global Messages</span></a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li [ngClass]="showAccounting?'is-active':''">
+          <a (click)="toggleAccounting()" href="javascript:void(0);"><i class="fal fa-user"></i><span class="title">Accounting</span><span class="arrow"><i class="fal fa-angle-right"></i></span></a>
+          <ul>
+            <li>
+              <a href="javascript:void(0);"><span class="title">Activity Sessions</span></a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"><span class="title">Browser/Locate Invoices</span></a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"><span class="title">Print Journal Entries</span></a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"><span class="title">Calculate Finance Charges</span></a>
+            </li>
+            <li [ngClass]="showPrintStatements?'is-active':''">
+              <a (click)="togglePrintStatements()" href="javgascript:void(0);"><i class="fal fa-user"></i><span class="title">Print Statements</span><span class="arrow"><i class="fal fa-angle-right"></i></span></a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">All</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Non-Retail</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Retail</span></a>
+                </li>
+
+              </ul>
+            </li>
+            <li [ngClass]="showReports?'is-active':''">
+              <a (click)="toggleReports()" href="javgascript:void(0);">
+                <i class="fal fa-user"></i>
+                <span class="title">Reports</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+              </a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Trial Balance</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Short Form Trial Balance</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Detailed Trial Balance</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Distribution</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Dollar Sales Summary</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Delinquency</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Delinquency (60+)</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">CreditCard Transactions</span></a>
+                </li>
+
+              </ul>
+            </li>
+            <li [ngClass]="showCreditCards?'is-active':''">
+              <a (click)="toggleCreditCards()" href="javgascript:void(0);">
+                <i class="fal fa-user"></i>
+                <span class="title">Credit Cards</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+              </a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Authorize Charges</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Capture Charges</span></a>
+                </li>
+              </ul>
+            </li>
+            <br />
+            <li>
+              <a href="javgascript:void(0);"><span class="title">Annual Closeout</span></a>
+            </li>
+
+          </ul>
+        </li>
+
+
+        <li [ngClass]="showAllReports?'is-active':''">
+          <a (click)="toggleAllReports()" href="javascript:void(0);">
+            <i class="fal fa-user"></i>
+            <span class="title">Reports</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+          </a>
+          <ul>
+
+            <li [ngClass]="showItemReports?'is-active':''">
+              <a (click)="toggleItemReports()" href="javgascript:void(0);">
+                <i class="fal fa-user">
+                </i><span class="title">Item Reports</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+              </a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Master Breed Search</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Breed Search</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Master Breed Remaining</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Multiple Code Search</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Cornish Rock</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Breed Limit</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Unshipped Master Breed Search</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Unshipped Breed Search</span></a>
+                </li>
+
+              </ul>
+            </li>
+            <li [ngClass]="showOrderReports?'is-active':''">
+              <a (click)="toggleOrderReports()" href="javgascript:void(0);">
+                <i class="fal fa-user"></i>
+                <span class="title">Order Reports</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+              </a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Open Orders</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Can Move Up</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Special Services</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Special Instructions</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">NPIP</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Health Papers</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Postal COD List</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Postal Surcharge</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Order  Modification</span></a>
+                </li>
+
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Oders By P.O.</span></a>
+                </li>
+
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Booking Confirmation</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Egg Forecast</span></a>
+                </li>
+
+              </ul>
+            </li>
+            <li [ngClass]="showAvailability?'is-active':''">
+              <a (click)="toggleAvailability()" href="javgascript:void(0);">
+                <i class="fal fa-user"></i>
+                <span class="title">Availability</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+              </a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Extended</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Forecast</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Outsource</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Find Availability</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Outside Purchases</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Custom Extended</span></a>
+                </li>
+
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Custome Forecast</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Postal COD List</span></a>
+                </li>
+
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Worksheet</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Static Inventory</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Chicks Field</span></a>
+                </li>
+
+              </ul>
+            </li>
+            <br />
+
+            <li [ngClass]="showDateProcesses?'is-active':''">
+              <a (click)="toggleDateProcesses()" href="javgascript:void(0);">
+                <i class="fal fa-user"></i>
+                <span class="title">Date Processes</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+              </a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Shipping Labels</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Invoices</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Email Notifications</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Unshipped Orders</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Toggle Print Flags</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Invoices Summary</span></a>
+                </li>
+              </ul>
+            </li>
+            <br />
+            <li [ngClass]="showCustomer?'is-active':''">
+              <a (click)="toggleCustomer()" href="javgascript:void(0);">
+                <i class="fal fa-user"></i>
+                <span class="title">Customer</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+              </a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">History by Type/Pricesheet</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Detailed Notes</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Order Notes</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">By Type</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">By Pricesheet</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Three Year Comparison by Customer Type</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Balance by Payment Terms</span></a>
+                </li>
+              </ul>
+            </li>
+            <br />
+            <li [ngClass]="showDropShip?'is-active':''">
+              <a (click)="toggleDropShip()" href="javgascript:void(0);">
+                <i class="fal fa-user"></i>
+                <span class="title">Drop Ship</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+              </a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Standard Drop Ship</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Drop Ship Summary</span></a>
+                </li>
+              </ul>
+            </li>
+            <br />
+
+            <li [ngClass]="showPricesheet?'is-active':''">
+              <a (click)="togglePricesheet()" href="javgascript:void(0);">
+                <i class="fal fa-user"></i>
+                <span class="title">Pricesheet</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+              </a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Prices</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Comparison</span></a>
+                </li>
+
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Mailing List</span></a>
+                </li>
+              </ul>
+            </li>
+
+            <br />
+
+            <li [ngClass]="showCallLists?'is-active':''">
+              <a (click)="toggleCallLists()" href="javgascript:void(0);">
+                <i class="fal fa-user"></i>
+                <span class="title">CallLists</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+              </a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Hatchery</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Easter</span></a>
+                </li>
+
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Start of Year</span></a>
+                </li>
+              </ul>
+            </li>
+
+            <br />
+
+          </ul>
+        </li>
+
+        <!--Separate Menu Item for Maintenance -->
+        <li [ngClass]="showMaintenance?'is-active':''">
+          <a (click)="toggleMaintenance()" href="javascript:void(0);">
+            <i class="fal fa-user"></i>
+            <span class="title">Maintenance</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+          </a>
+          <ul>
+
+            <li [ngClass]="showMaintenanceTypes?'is-active':''">
+              <a (click)="toggleMaintenanceTypes()" href="javgascript:void(0);">
+                <i class="fal fa-user">
+                </i><span class="title">Maintenance Types</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+              </a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Customer Types</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Price Sheets</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Ship Day Codes</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Postal Codes</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Shipping Zones</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Program Configuration</span></a>
+                </li>
+                <li [ngClass]="showDeveloperMaintenance?'is-active':''">
+                  <a (click)="toggleDeveloperMaintenance()" href="javgascript:void(0);">
+                    <i class="fal fa-user">
+                    </i><span class="title">Developer Maintenance</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+                  </a>
+                  <ul>
+                    <li>
+                      <a href="javascript:void(0);"><span class="title">Validate Address By Customer Type</span></a>
+                    </li>
+                  </ul>
+                </li>
+
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <!--Separate Menu Item for Web Site-->
+        <li [ngClass]="showWebSite?'is-active':''">
+          <a (click)="toggleWebSite()" href="javascript:void(0);">
+            <i class="fal fa-user"></i>
+            <span class="title">Web Site</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+          </a>
+          <ul>
+            <li [ngClass]="showWebAvailability?'is-active':''">
+              <a (click)="toggleWebAvailability()" href="javgascript:void(0);">
+                <i class="fal fa-user">
+                </i><span class="title">Availability</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+              </a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Maintaince</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Report</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Sell Out</span></a>
+                </li>
+
+              </ul>
+            </li>
+
+            <li [ngClass]="showWaitList?'is-active':''">
+              <a (click)="toggleWaitList()" href="javgascript:void(0);">
+                <i class="fal fa-user">
+                </i><span class="title">Wait List</span><span class="arrow"><i class="fal fa-angle-right"></i></span>
+              </a>
+              <ul>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Print</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Wait List Entry</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Wait List Search</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Master Breed Search</span></a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);"><span class="title">Breed Search</span></a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="javascript:void(0);"><span class="title">Comments</span></a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"><span class="title">Unimported Orders</span></a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"><span class="title">Specials</span></a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li>
+          <a routerLink="/feedback"><i class="fal fa-comments"></i><span class="title">Feedback</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

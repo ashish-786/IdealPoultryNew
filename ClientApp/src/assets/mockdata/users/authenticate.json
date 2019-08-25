@@ -1,0 +1,11 @@
+{
+  "id": 11,
+  "username": "IDEALADM",
+  "email": "ashish.kumar@inspopindia.com",
+  "accountStatusId": 1,
+  "loginStatusId": 1,
+  "isactive": false,
+  "rolename": null,
+  "levelname": null,
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjExIiwibmJmIjoxNTQ4NjgyMDA0LCJleHAiOjE1NDkyODY4MDQsImlhdCI6MTU0ODY4MjAwNH0.s7Sepq2ZV0Gj_zfzyE9SM4OMhla8MoN_OHztn2l-FjA"
+}

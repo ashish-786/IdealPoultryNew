@@ -1,0 +1,640 @@
+{
+  "users": [
+    {
+      "userid": 1,
+      "username": "SahiHaiOwner",
+      "emailid": "ashish.kumar@inspopindia.com",
+      "accountstatusid": 0,
+      "loginstatusid": 1,
+      "isactive": true,
+      "applicationdatetime": "2019-01-14 13:16:35.6066667"
+    }
+  ],
+  "userrolemapping": [
+    {
+      "userrolemappingid": 1,
+      "userid": 1,
+      "roleid": 1,
+      "productid": 1
+    }
+  ],
+  "userlevelmapping": [
+    {
+      "userlevelmappingid": 1,
+      "userid": 1,
+      "levelmasterid": 1,
+      "levelid": 1,
+      "applicationdatetime": "2019-01-14 13:35:29.9970000"
+    }
+  ],
+  "subgroup": [
+    {
+      "subgroupid": 1,
+      "groupname": "group 1",
+      "subgroupname": "sub group 1",
+      "subgroupdescription": "sub group description 1",
+      "emailid": "ashsahji123@gmail.com",
+      "phonenumber": "1234567891",
+      "contactperson": "person 1",
+      "subgroupaddress": "test address 1",
+      "groupid": 1,
+      "isactive": true,
+      "applicationdatetime": "2019-01-14 13:35:29.9970000",
+      "Product": "Insurance"
+    },
+    {
+      "subgroupid": 2,
+      "groupname": "group 2",
+      "subgroupname": "sub group 2",
+      "subgroupdescription": "sub group description 2",
+      "emailid": "ashsahji123@gmail.com",
+      "phonenumber": "1234567892",
+      "contactperson": "person 2",
+      "subgroupaddress": "test address 2",
+      "groupid": 2,
+      "isactive": true,
+      "applicationdatetime": "2019-01-14 13:35:29.9970000",
+      "Product": "Insurance"
+    },
+    {
+      "subgroupid": 3,
+      "groupname": "test Group",
+      "subgroupname": "SubGroup",
+      "contactperson": "test name",
+      "emailid": "ashsahji123@gmail.com",
+      "phonenumber": "1234567891",
+      "Product": "Insurance",
+      "groupid": 2
+    },
+    {
+      "subgroupid": 4,
+      "groupname": "test Group",
+      "contactperson": "test name",
+      "subgroupname": "SubGroup",
+      "emailid": "ashsahji123@gmail.com",
+      "phonenumber": "1234567891",
+      "Product": "Insurance",
+      "groupid": 2
+    },
+    {
+      "subgroupid": 5,
+      "groupname": "test Group",
+      "contactperson": "test name",
+      "subgroupname": "SubGroup",
+      "emailid": "ashsahji123@gmail.com",
+      "phonenumber": "1234567891",
+      "Product": "Insurance",
+      "groupid": 2
+    },
+    {
+      "subgroupid": 6,
+      "groupname": "test Group",
+      "contactperson": "test name",
+      "subgroupname": "SubGroup",
+      "emailid": "ashsahji123@gmail.com",
+      "phonenumber": "1234567891",
+      "Product": "Insurance",
+      "groupid": 2
+    },
+    {
+      "subgroupid": 7,
+      "groupname": "test Group",
+      "contactperson": "test name",
+      "subgroupname": "SubGroup",
+      "emailid": "ashsahji123@gmail.com",
+      "phonenumber": "1234567891",
+      "Product": "Insurance",
+      "groupid": 2
+    },
+    {
+      "subgroupid": 8,
+      "groupname": "test Group",
+      "contactperson": "test name",
+      "subgroupname": "SubGroup",
+      "emailid": "ashsahji123@gmail.com",
+      "phonenumber": "1234567891",
+      "Product": "Insurance",
+      "groupid": 2
+    },
+    {
+      "subgroupid": 9,
+      "groupname": "test Group",
+      "contactperson": "test name",
+      "subgroupname": "SubGroup",
+      "emailid": "ashsahji123@gmail.com",
+      "phonenumber": "1234567891",
+      "Product": "Insurance",
+      "groupid": 2
+    },
+    {
+      "subgroupid": 10,
+      "groupname": "test Group",
+      "contactperson": "test name",
+      "subgroupname": "SubGroup",
+      "emailid": "ashsahji123@gmail.com",
+      "phonenumber": "1234567891",
+      "Product": "Insurance",
+      "groupid": 2
+    }
+  ],
+  "rolemaster": [
+    {
+      "roleid": 1,
+      "rolename": "Admin",
+      "levelmasterid": 1
+    },
+    {
+      "roleid": 2,
+      "rolename": "Analyst",
+      "levelmasterid": 1
+    },
+    {
+      "roleid": 3,
+      "rolename": "Admin",
+      "levelmasterid": 2
+    },
+    {
+      "roleid": 4,
+      "rolename": "Analyst",
+      "levelmasterid": 2
+    },
+    {
+      "roleid": 5,
+      "rolename": "Admin",
+      "levelmasterid": 3
+    },
+    {
+      "roleid": 6,
+      "rolename": "Analyst",
+      "levelmasterid": 3
+    },
+    {
+      "roleid": 7,
+      "rolename": "Admin",
+      "levelmasterid": 4
+    },
+    {
+      "roleid": 8,
+      "rolename": "Analyst",
+      "levelmasterid": 4
+    },
+    {
+      "roleid": 9,
+      "rolename": "Supervisor",
+      "levelmasterid": 4
+    },
+    {
+      "roleid": 10,
+      "rolename": "Agent",
+      "levelmasterid": 4
+    }
+
+  ],
+  "permission": [
+    {
+      "permissionid": 1,
+      "permissionname": "Read"
+    },
+    {
+      "permissionid": 2,
+      "permissionname": "ReadWrite"
+    },
+    {
+      "permissionid": 3,
+      "permissionname": "Hidden"
+    }
+  ],
+  "ownerproductmapping": [
+    {
+      "ownerproductmappingid": 1,
+      "ownerid": 1,
+      "productid": 1
+    },
+    {
+      "ownerproductmappingid": 2,
+      "ownerid": 1,
+      "productid": 2
+    }
+  ],
+  "owner": [
+    {
+      "ownerid": 1,
+      "ownername": "sahihai.com",
+      "ownerdescription": "sahihai.com is owner of LMS",
+      "emailid": "mohit.kumar@inspopindia.com",
+      "phonenumber": "9910806280",
+      "contactperson": "Mohit",
+      "owneraddress": "International Tech Park Ascendas Gurugram."
+    }
+  ],
+  "loginstatus": [
+    {
+      "loginstatusid": 1,
+      "loginstatusname": "Logged In"
+    },
+    {
+      "loginstatusid": 2,
+      "loginstatusname": "Logged Out"
+    },
+    {
+      "loginstatusid": 3,
+      "loginstatusname": "On Break"
+    }
+  ],
+  "loginlogs": [
+    {
+      "loginlogid": 1,
+      "ipaddress": "127.0.0.1",
+      "userid": 1,
+      "loginstatusid": 1
+    }
+  ],
+  "levelmaster": [
+    {
+      "levelmasterid": 1,
+      "levelname": "Owner"
+    },
+    {
+      "levelmasterid": 2,
+      "levelname": "Group"
+    },
+    {
+      "levelmasterid": 3,
+      "levelname": "SubGroup"
+    },
+    {
+      "levelmasterid": 4,
+      "levelname": "Agency"
+    }
+  ],
+  "lead": [
+    {
+      "leadid": 1,
+      "sessionid": "ef7890d4-579e-4f7e-95ee-943cb964506b",
+      "customeractivityid": "ef7890d4-579e-4f7e-95ee-943cb964506b",
+      "customerid": 12345,
+      "customername": "test customer name",
+      "emailid": "ashsahji123@gmail.com",
+      "mobilenumber": "9891501363",
+      "loantype": "test",
+      "cityname": "test",
+      "statename": "test",
+      "productid": 1,
+      "otherdetail": "testing",
+      "leadstatus": "assigned",
+      "agentname": "astha",
+      "leadname": "testing"
+    },
+    {
+      "leadid": 2,
+      "sessionid": "ef7890d4-579e-4f7e-95ee-943cb964506b",
+      "customeractivityid": "ef7890d4-579e-4f7e-95ee-943cb964506b",
+      "customerid": 12345,
+      "customername": "test customer name",
+      "emailid": "ashsahji123@gmail.com",
+      "mobilenumber": "9891501363",
+      "loantype": "test",
+      "cityname": "test",
+      "statename": "test",
+      "productid": 1,
+      "otherdetail": "testing",
+      "leadstatus": "assigned",
+      "agentname": "astha",
+      "leadname": "testing"
+    }
+  ],
+  "hiddenfeatureattributes": [
+    {
+      "hiddenfeatureattributeid": 1,
+      "featureid": "1",
+      "featureattributes": "testing"
+    }
+  ],
+  "group": [
+    {
+      "groupid": 1,
+      "groupname": "test Group",
+      "groupdescription": "testing",
+      "contactperson": "test name",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363",
+      "Product": "Insurance",
+      "groupaddress": "test address",
+      "ownerid": 1,
+      "isactive": true,
+      "applicationdatetime": "2019-01-14 13:35:29.9970000"
+    },
+    {
+      "groupid": 1,
+      "groupname": "test Group",
+      "groupdescription": "testing",
+      "contactperson": "test name",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363'",
+      "Product": "Insurance",
+      "groupaddress": "test address",
+      "ownerid": 1,
+      "isactive": true,
+      "applicationdatetime": "2019-01-14 13:35:29.9970000"
+    },
+    {
+      "groupid": 1,
+      "groupname": "test Group",
+      "groupdescription": "testing",
+      "contactperson": "test name",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363'",
+      "Product": "Insurance",
+      "groupaddress": "test address",
+      "ownerid": 1,
+      "isactive": true,
+      "applicationdatetime": "2019-01-14 13:35:29.9970000"
+    },
+    {
+      "groupid": 1,
+      "groupname": "test Group",
+      "groupdescription": "testing",
+      "contactperson": "test name",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363'",
+      "Product": "Insurance",
+      "groupaddress": "test address",
+      "ownerid": 1,
+      "isactive": true,
+      "applicationdatetime": "2019-01-14 13:35:29.9970000"
+    },
+    {
+      "groupid": 1,
+      "groupname": "test Group",
+      "groupdescription": "testing",
+      "contactperson": "test name",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363'",
+      "Product": "Insurance",
+      "groupaddress": "test address",
+      "ownerid": 1,
+      "isactive": true,
+      "applicationdatetime": "2019-01-14 13:35:29.9970000"
+    },
+    {
+      "groupid": 1,
+      "groupname": "test Group",
+      "groupdescription": "testing",
+      "contactperson": "test name",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363'",
+      "Product": "Insurance",
+      "groupaddress": "test address",
+      "ownerid": 1,
+      "isactive": true,
+      "applicationdatetime": "2019-01-14 13:35:29.9970000"
+    },
+    {
+      "groupid": 1,
+      "groupname": "test Group",
+      "groupdescription": "testing",
+      "contactperson": "test name",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363'",
+      "Product": "Insurance",
+      "groupaddress": "test address",
+      "ownerid": 1,
+      "isactive": true,
+      "applicationdatetime": "2019-01-14 13:35:29.9970000"
+    },
+    {
+      "groupid": 1,
+      "groupname": "test Group",
+      "groupdescription": "testing",
+      "contactperson": "test name",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363'",
+      "Product": "Insurance",
+      "groupaddress": "test address",
+      "ownerid": 1,
+      "isactive": true,
+      "applicationdatetime": "2019-01-14 13:35:29.9970000"
+    }
+  ],
+  "groupproductmapping": [
+    {
+      "groupproductmappingid": 1,
+      "groupid": 1,
+      "productid": 1,
+      "applicationdatetime": "2019-01-14 13:35:29.9970000"
+    }
+  ],
+  "geomapping": [
+    {
+      "geomappingid": 1,
+      "groupid": 1,
+      "groupname": "test group1",
+      "subgroupid": 1,
+      "subgroupname": "test subgroup1",
+      "agencyid": 1,
+      "agencyname": "test agency1",
+      "cityname": [ "Gurugram" ],
+      "statename": [ "Haryana" ]
+    },
+    {
+      "geomappingid": 2,
+      "groupid": 1,
+      "groupname": "test group1",
+      "subgroupid": 1,
+      "subgroupname": "test subgroup1",
+      "agencyid": 1,
+      "agencyname": "test agency1",
+      "cityname": [ "Gurugram" ],
+      "statename": [ "Haryana" ]
+    },
+    {
+      "geomappingid": 3,
+      "groupid": 2,
+      "groupname": "test group2",
+      "subgroupid": 2,
+      "subgroupname": "test subgroup2",
+      "agencyid": 2,
+      "agencyname": "test agency2",
+      "cityname": [ "Gurugram", "city2" ],
+      "statename": [ "Haryana", "state2" ]
+    }
+  ],
+  "features": [
+    {
+      "featureid": 1,
+      "featurename": "test"
+    }
+  ],
+  "featurespermissionmapping": [
+    {
+      "featurepermissionmappingid": 1,
+      "featureid": 1,
+      "roleid": 1,
+      "permissionid": 1
+    }
+  ],
+  "agency": [
+    {
+      "groupname": "test Group",
+      "SubGroup": "SubGroup",
+      "Agency": "Agency",
+      "contactperson": "test name",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363",
+      "Product": "Insurance",
+      "agencyid": 1,
+      "isactive": true,
+      "agencyaddress": "test address",
+      "subgroupid": 1
+    },
+    {
+      "groupname": "test Group",
+      "contactperson": "test name",
+      "SubGroup": "SubGroup",
+      "Agency": "Agency",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363",
+      "Product": "Insurance",
+      "agencyid": 1,
+      "isactive": true,
+      "agencyaddress": "test address",
+      "subgroupid": 1
+    },
+    {
+      "groupname": "test Group",
+      "contactperson": "test name",
+      "SubGroup": "SubGroup",
+      "Agency": "Agency",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363",
+      "Product": "Insurance",
+      "agencyid": 1,
+      "isactive": true,
+      "agencyaddress": "test address",
+      "subgroupid": 1
+    },
+    {
+      "groupname": "test Group",
+      "contactperson": "test name",
+      "SubGroup": "SubGroup",
+      "Agency": "Agency",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363",
+      "Product": "Insurance",
+      "agencyid": 1,
+      "isactive": true,
+      "agencyaddress": "test address",
+      "subgroupid": 1
+    },
+    {
+      "groupname": "test Group",
+      "contactperson": "test name",
+      "SubGroup": "SubGroup",
+      "Agency": "Agency",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363",
+      "Product": "Insurance",
+      "agencyid": 1,
+      "isactive": true,
+      "agencyaddress": "test address",
+      "subgroupid": 1
+    },
+    {
+      "groupname": "test Group",
+      "contactperson": "test name",
+      "SubGroup": "SubGroup",
+      "Agency": "Agency",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363",
+      "Product": "Insurance",
+      "agencyid": 1,
+      "isactive": true,
+      "agencyaddress": "test address",
+      "subgroupid": 1
+    },
+    {
+      "groupname": "test Group",
+      "contactperson": "test name",
+      "SubGroup": "SubGroup",
+      "Agency": "Agency",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363",
+      "Product": "Insurance",
+      "agencyid": 1,
+      "isactive": true,
+      "agencyaddress": "test address",
+      "subgroupid": 1
+    },
+    {
+      "groupname": "test Group",
+      "contactperson": "test name",
+      "SubGroup": "SubGroup",
+      "Agency": "Agency",
+      "EmailID": "ashsahji123@gmail.com",
+      "PhoneNumber": "9891501363",
+      "Product": "Insurance",
+      "agencyid": 1,
+      "isactive": true,
+      "agencyaddress": "test address",
+      "subgroupid": 1
+    }
+  ],
+  "accountstatus": [
+    {
+      "accountstatusid": 1,
+      "accountstatusname": "Locked"
+    },
+    {
+      "accountstatusid": 2,
+      "accountstatusname": "Password Expired"
+    }
+  ],
+  "products": [
+    {
+      "productid": 1,
+      "product": "PersonalLoan",
+      "active": true
+    },
+    {
+      "productid": 2,
+      "product": "HomeLoan",
+      "active": false
+    },
+    {
+      "productid": 3,
+      "product": "BusinessLoan",
+      "active": true
+    },
+    {
+      "productid": 4,
+      "product": "CreditCard",
+      "active": false
+    }
+  ],
+  "detailedreports": [
+    {
+      "grouphierarchy": "Group>Sub Group>Agency",
+      "name": "Name 1",
+      "product": "Home",
+      "loantype": "Home Loan",
+      "loanamt": "1 Cr",
+      "currentstatus": "active",
+      "agent": "Agent 1",
+      "phonenumber": "+91 8130821234"
+    }
+  ],
+  "loantype": [
+    {
+      "loanID": 1,
+      "loan": "New"
+    },
+    {
+      "loanID": 2,
+      "loan": "Balance Transfer"
+    },
+    {
+      "loanID": 3,
+      "loan": "Balance Transfer + Top Up"
+    }
+  ]
+}
