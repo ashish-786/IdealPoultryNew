@@ -27,7 +27,7 @@
     "@nguniversal/module-map-ngfactory-loader": "^7.0.2",
     "@syncfusion/ej2": "^16.4.46",
     "@syncfusion/ej2-angular-grids": "^16.4.46",
-    "ajv": "^6.5.5",
+    "ajv": "^6.12.3",
     "angular-user-idle": "^2.1.1",
     "aspnet-prerendering": "^3.0.1",
     "bootstrap": "^4.3.1",
