@@ -35,7 +35,7 @@
     "highcharts": "6.0.7",
     "jquery": "^3.3.1",
     "jw-bootstrap-switch-ng2": "^2.0.5",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "ng-multiselect-dropdown": "^0.2.3",
     "ngx-csv": "^0.3.1",
     "ngx-mask": "^7.9.3",
